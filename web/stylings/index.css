@@ -26,23 +26,40 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 1.75em;
+    padding: .5em;
 }
 
 /* HEADER */
 header {
-    padding: 10px;
-    
     display: flex;
     flex-direction: row;
     gap: 10px;
+
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li, #main-title {
+    padding: 15px;
+}
+
+nav li:hover {
+    cursor: pointer;
+    background: var(--COLOR-HOVER-BACKGROUND);
 }
 
 /* MAIN */
 main {
     display: flex;
     flex-direction: row;
-    gap: 1.5em;
+    gap: .5em;
 }
 
 .mother-panels {
@@ -55,4 +72,11 @@ main {
 
 #logging-panel {
     flex: 2;
+}
+
+#console-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }

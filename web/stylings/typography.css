@@ -3,11 +3,16 @@
 @import "./const-vars.css";
 
 
-p, span, label {
+p, li, span, label {
     color: var(--COLOR-MAIN-TEXT);
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+}
+
+a {
+    color: var(--COLOR-MAIN-TEXT);
+    text-decoration: none;
 }
 
 /*
