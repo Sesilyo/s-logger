@@ -1,0 +1,6 @@
+/* IMPORTS */
+@import "./const-vars.css";
+
+span, p {
+    color: var(--COLOR-MAIN-TEXT);
+}
