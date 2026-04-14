@@ -16,6 +16,7 @@
                 <ul>
                     <li><a href="#">NEW LOG</a></li>
                     <li><a href="#">VIEW</a></li>
+                    <li><a href="#">SEARCH</a></li>
                 </ul>
             </nav>
         </header>
@@ -23,7 +24,7 @@
         <main>
             <div id="explorer-panel" class="mother-panels">
                 <div id="logs-explorer">
-                    <label for="select-sort">Sort</label>
+                    <label for="select-sort">Sort by: </label>
                     <select name="sort" id="select-sort">
                         <option value="update">Last Updated</option>
                         <option value="starred">Starred</option>
@@ -36,9 +37,15 @@
             
             
             <div id="logging-panel" class="mother-panels">
-                <div id="console-header">
-                    <span id="log-title">[log title]</span>
-                    <div id="clocks" title="more clocks"><p>Time goes here</p></div>
+                <div id="console-body">
+                    <div id="console-header">
+                        <span id="log-title">[log title]</span>
+                        <div id="clocks" title="more clocks"><p>Time goes here</p></div>
+                    </div>
+
+                    <div id="logs-field">
+
+                    </div>
                 </div>
             </div>
         </main>

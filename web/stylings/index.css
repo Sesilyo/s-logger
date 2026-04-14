@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     gap: 5px;
     padding: .5em;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -74,9 +75,27 @@ main {
     flex: 2;
 }
 
+/* RIGHT PANEL */
+#logs-explorer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 5px;
+}
+
+#logs-explorer select {
+    background: var(--COLOR-HOVER-BACKGROUND);
+    font-size: inherit;
+    border: none;
+    padding: 0 10px;
+}
+
+/* LEFT PANEL */
 #console-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+
+    border-bottom: 2px solid var(--COLOR-MAIN-TEXT);
 }

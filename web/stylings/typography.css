@@ -3,7 +3,7 @@
 @import "./const-vars.css";
 
 
-p, li, span, label {
+p, li, span, label, select {
     color: var(--COLOR-MAIN-TEXT);
     font-family: "Space Mono", monospace;
     font-weight: 400;
