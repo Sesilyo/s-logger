@@ -56,6 +56,13 @@ nav ul {
 
 nav li, #main-title {
     padding: 15px;
+    white-space: nowrap;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 nav li:hover {
