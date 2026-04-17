@@ -11,6 +11,13 @@
     box-sizing: 0;
 }
 
+.icons {
+    max-width: 16px;
+    min-width: 16px;
+
+    image-rendering: pixelated;
+}
+
 body {
     background: var(--COLOR-ABSOLUTE-BACKGROUND);
     display: flex;
@@ -107,6 +114,12 @@ main {
     flex-direction: row;
     padding: 10px;
     gap: 5px;
+
+    align-items: center;
+}
+
+#logs-explorer label {
+    white-space: nowrap;
 }
 
 #logs-explorer select {
@@ -114,6 +127,8 @@ main {
     font-size: inherit;
     border: none;
     padding: 0 10px;
+
+    text-overflow: ellipsis;
 }
 
 
