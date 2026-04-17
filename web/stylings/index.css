@@ -54,6 +54,9 @@ nav li, #main-title {
 nav li:hover {
     cursor: pointer;
     background: var(--COLOR-HOVER-BACKGROUND);
+    
+    /* box-shadow: [inset] [h-offset] [v-offset] [blur] [spread] [color]*/
+    box-shadow: inset 0 -3px 0 var(--COLOR-MAIN-ACCENT);
 }
 
 /* MAIN */
@@ -89,6 +92,7 @@ main {
     border: none;
     padding: 0 10px;
 }
+
 
 /* LEFT PANEL */
 #console-header {

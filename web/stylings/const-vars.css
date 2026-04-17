@@ -1,9 +1,11 @@
 :root {
     /* COLORS */
 
-    --COLOR-MAIN-TEXT:       #e0e0e0;
+    --COLOR-MAIN-TEXT:       #F2EFE7;
     --COLOR-MAIN-BACKGROUND: #1a1a2e;
     --COLOR-ABSOLUTE-BACKGROUND: #0d0a17;
     
+    --COLOR-MAIN-ACCENT: #8B004A;
+
     --COLOR-HOVER-BACKGROUND: #2c324d;
 }
