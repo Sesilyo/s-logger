@@ -9,7 +9,7 @@ obj/
 *.o
 
 # Logs (don't commit actual log data)
-logs/
+logs/**/*.txt
 
 # Python
 __pycache__/
