@@ -15,16 +15,8 @@
 
 
 // +--- MACROS ---+ //
-#ifndef GETTIME_H
-#define GETTIME_H
-
-char *getDateTime();
-
-#endif
-
 #define MAX_MESSAGE_LENGTH 256
 #define LOG_FILE "../logs/logs.txt"
-
 
 
 // +--- STRUCTURES BLOCK ---+ //

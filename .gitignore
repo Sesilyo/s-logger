@@ -1,0 +1,20 @@
+# Code::Blocks artifacts
+bin/
+obj/
+*.depend
+*.layout
+
+# Compiled binaries
+*.exe
+*.o
+
+# Logs (don't commit actual log data)
+logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS clutter
+.DS_Store
+Thumbs.db
