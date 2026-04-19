@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1775021636 source:c:\users\seth\onedrive\desktop\projects\logs\logs\main.c
-	<stdio.h>
-	<stdlib.h>
-
-1775021636 source:c:\users\seth\onedrive\desktop\projects\logs\logs\src\main.c
-	<stdio.h>
-	<stdlib.h>
-

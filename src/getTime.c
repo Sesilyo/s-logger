@@ -8,15 +8,6 @@
 
 #define BASE_YEAR 1900
 
-char *getDateTime();
-
-
-int main(void)
-{
-
-    return 0;
-}
-
 char *getDateTime()
 {
     time_t t = time(NULL);

@@ -14,7 +14,14 @@
 // +--- FUNCTION DECLARATION BLOCKS ---+ //
 
 
-// +--- CONSTANTS ---+ //
+// +--- MACROS ---+ //
+#ifndef GETTIME_H
+#define GETTIME_H
+
+char *getDateTime();
+
+#endif
+
 #define MAX_MESSAGE_LENGTH 256
 #define LOG_FILE "../logs/logs.txt"
 
@@ -22,28 +29,8 @@
 
 // +--- STRUCTURES BLOCK ---+ //
 typedef struct LogEntry {
-    char timestamp[32];
-    char *message
+    char *logLine;
 } LogEntry;
-
-
-// +--- MAIN ---+ //
-int main(void)
-{
-    // SETH WAS HERE
-    printf("Hello, World!\n");
-
-    char *s = getDateTime();
-    printf("%s\n", s);
-    free(s);
-
-    instantiateLog();
-
-    return 0;
-}
-
-
-
 
 
 char *finalStringLine()
