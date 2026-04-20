@@ -33,9 +33,10 @@
                     <img src="./assets/icons/filter-icon.png" class="icons">
                     <label for="select-sort">Sort by: </label>
                     <select name="sort" id="select-sort">
-                        <option value="update">Last Updated</option>
-                        <option value="starred">Starred</option>
-                        <option value="most-logs">Most Logs</option>
+                        <option value="pinned">Pinned</option>
+                        <option value="one-week">Within 7 days</option>
+                        <option value="one-fortnite">Within a fortnite</option>
+                        <option value="one-month">Within 30 days</option>
                     </select>
                     
                     <div id="logs-list"></div>
@@ -47,7 +48,10 @@
                 <div id="console-body">
                     <div id="console-header">
                         <label id="log-title">[log title]</label>
-                        <div id="clocks" title="more clocks"><p>Time goes here</p></div>
+                        <div id="clocks" title="more clocks">
+                            <p id="time-displayer"></p>
+                            <p id="date-displayer"></p>
+                        </div>
                     </div>
 
                     <div id="logs-field">

@@ -134,6 +134,7 @@ main {
     font-size: inherit;
     border: none;
     padding: 0 10px;
+    text-align: center;
 
     text-overflow: ellipsis;
 }
@@ -147,4 +148,10 @@ main {
     padding: 10px;
 
     border-bottom: 2px solid var(--COLOR-MAIN-TEXT);
+}
+
+#clocks {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }

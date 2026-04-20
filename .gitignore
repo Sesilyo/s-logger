@@ -1,15 +1,5 @@
-# Code::Blocks artifacts
-bin/
-obj/
-*.depend
-*.layout
-
-# Compiled binaries
-*.exe
-*.o
-
-# Logs (don't commit actual log data)
-logs/**/*.txt
+# Database
+logs/logger.db
 
 # Python
 __pycache__/
