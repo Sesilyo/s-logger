@@ -16,7 +16,11 @@
                 <ul>
                     <li>
                         <img src="./assets/icons/new-log-icon.png" class="icons">
-                        <a href="#">NEW LOG</a>
+                        <button id="new-log-btn">NEW LOG</button>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/new-log-icon.png" class="icons">
+                        <button id="new-proj-btn">NEW PROJECT</button>
                     </li>
                     <li><a href="#">VIEW</a></li>
                     <li id="search-logs">
@@ -63,7 +67,37 @@
         
         <footer></footer>
 
+
+        <!-- MODALS - hidden by default -->
+        
+        <!-- NEW LOG MODAL -->
+        <div id="new-log-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>New Log</h3>
+                <form id="new-log-form">
+                    <label for="new-log-name-text">Log Title</label>
+                    <input type="text" id="new-log-name-text" alt="Enter log name here">
+                    <select id="new-log-tags">
+    
+                    </select>
+    
+                    <div id="project-toggle">
+                        <input type="checkbox" id="under-project-check">
+                        <label for="under-project-check">Under a Project?</label>
+                    </div>
+    
+                    <div id="confirm-new-log">
+                        <button type="button" id="cancel-log-btn">Cancel</button>
+                        <button type="submit" id="confirm-log-btn">Initialize Log</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+
         <script src="./scripts/showSearchLogic.js"></script>
         <script src="./scripts/dateTimeLogics.js"></script>
+        <script src="./scripts/newLogInit.js"></script>
     </body>
 </html>

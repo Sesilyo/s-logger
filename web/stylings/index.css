@@ -54,19 +54,35 @@ nav ul {
     padding: 0;
 }
 
-nav li, #main-title {
-    padding: 15px;
-    white-space: nowrap;
-}
-
 nav li {
+    white-space: nowrap;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-nav li:hover {
+nav li a {
+    padding: 15px;
+}
+
+#main-title {
+    padding: 15px;
+}
+
+
+nav li button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
     cursor: pointer;
+    padding: 0;
+
+    padding: 15px;
+}
+
+
+nav li:hover {
     background: var(--COLOR-HOVER-BACKGROUND);
     
     /* box-shadow: [inset] [h-offset] [v-offset] [blur] [spread] [color]*/
@@ -154,4 +170,26 @@ main {
     display: flex;
     flex-direction: column;
     text-align: right;
+}
+
+#clocks p {
+    white-space: nowrap;
+}
+
+/* MODALS */
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--COLOR-OVERLAY);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
