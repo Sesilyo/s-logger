@@ -11,7 +11,7 @@
     
     <body>
         <header>
-            <span id="main-title">S-LOGGER</span>
+            <p id="main-title">S-LOGGER</p>
             <nav  id="ribbons">
                 <ul>
                     <li>
@@ -32,6 +32,7 @@
         </header>
         
         <main>
+            <!-- RIGHT PANEL -->
             <div id="explorer-panel" class="mother-panels">
                 <div id="logs-explorer">
                     <img src="./assets/icons/filter-icon.png" class="icons">
@@ -48,10 +49,11 @@
             </div>
             
             
+            <!-- LEFT PANEL -->
             <div id="logging-panel" class="mother-panels">
                 <div id="console-body">
                     <div id="console-header">
-                        <label id="log-title">[log title]</label>
+                        <p id="log-title">[log title]</p>
                         <div id="clocks" title="more clocks">
                             <p id="time-displayer"></p>
                             <p id="date-displayer"></p>
@@ -77,17 +79,21 @@
                 <form id="new-log-form">
                     <label for="new-log-name-text">Log Title</label>
                     <input type="text" id="new-log-name-text" alt="Enter log name here">
+                    <br>
 
                     <label for="new-log-tags">Tag</label>
                     <select id="new-log-tags">
-    
+                        <option value="anecdote-tag">Andecdote</option>
+                        <option value="coding-tag">Coding</option>
+                        <option value="ecclesiastical-tag">Ecclesiastical</option>
                     </select>
     
                     <div id="project-toggle">
                         <input type="checkbox" id="under-project-check">
                         <label for="under-project-check">Under a Project?</label>
                     </div>
-    
+                    <br>
+
                     <div id="confirm-new-log">
                         <button type="button" id="cancel-log-btn" class="modal-cancel-btn modal-btn">Cancel</button>
                         <button type="submit" id="confirm-log-btn" class="modal-confirm-btn modal-btn">Initialize Log</button>

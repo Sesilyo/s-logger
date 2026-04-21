@@ -66,6 +66,7 @@ nav li a {
 }
 
 #main-title {
+    white-space: nowrap;
     padding: 15px;
 }
 
@@ -166,6 +167,12 @@ main {
     border-bottom: 2px solid var(--COLOR-MAIN-TEXT);
 }
 
+#log-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
 #clocks {
     display: flex;
     flex-direction: column;
@@ -196,13 +203,24 @@ main {
 
 .modal-content {
     background: var(--COLOR-MAIN-BACKGROUND);
-    border: 2px solid var(--COLOR-MAIN-ACCENT);
+    border: 2px solid var(--COLOR-ABSOLUTE-BACKGROUND);
     color: inherit;
-    padding: 30px 80px;
+
+    min-width: 400px;
+    max-width: 600px;
+
+    padding: 30px 15px;
 }
 
 .modal-title {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--COLOR-MAIN-TEXT);
+}
+
+.modal-content input, .modal-content select {
+    color: var(--COLOR-MAIN-BACKGROUND);
+    padding: 2px;
 }
 
 .modal-btn {
@@ -223,4 +241,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+#confirm-new-log {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
 }
