@@ -72,11 +72,13 @@
         
         <!-- NEW LOG MODAL -->
         <div id="new-log-modal" class="modal hidden">
-            <div class="modal-content">
-                <h3>New Log</h3>
+            <div id="new-log-content" class="modal-content">
+                <h3 class="modal-title">New Log</h3>
                 <form id="new-log-form">
                     <label for="new-log-name-text">Log Title</label>
                     <input type="text" id="new-log-name-text" alt="Enter log name here">
+
+                    <label for="new-log-tags">Tag</label>
                     <select id="new-log-tags">
     
                     </select>
@@ -87,8 +89,8 @@
                     </div>
     
                     <div id="confirm-new-log">
-                        <button type="button" id="cancel-log-btn">Cancel</button>
-                        <button type="submit" id="confirm-log-btn">Initialize Log</button>
+                        <button type="button" id="cancel-log-btn" class="modal-cancel-btn modal-btn">Cancel</button>
+                        <button type="submit" id="confirm-log-btn" class="modal-confirm-btn modal-btn">Initialize Log</button>
                     </div>
                 </form>
             </div>
