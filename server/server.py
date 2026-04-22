@@ -1,4 +1,4 @@
-# FILENAME : bridge.py
+# FILENAME : server.py
 # Bridges web UI to the compiled C logger binary
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
