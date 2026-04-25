@@ -4,7 +4,6 @@ import sqlite3
 from generate_log_id import generate_id
 
 
-
 def new_log(content, tag_id, proj_id, timestamp):
     
     # checker block if log belongs to a tag or a project
