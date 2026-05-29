@@ -60,6 +60,7 @@ nav li {
     display: flex;
     align-items: center;
     padding: 0;
+    transition: background-color 0.25s;
 }
 
 nav li .icons {
@@ -69,6 +70,7 @@ nav li .icons {
 nav li a {
     padding: 15px;
 }
+
 
 #main-title {
     white-space: nowrap;

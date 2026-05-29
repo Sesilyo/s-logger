@@ -46,5 +46,17 @@ def init_db():
             );
         """)
 
+        # seed default tags
+        cursor.executemany(
+            "INSERT OR IGNORE INTO Tags (tag_id, tag_name) VALUES (?, ?)",
+            [
+                ("ANE", "ANECTDOE"),
+                ("ECC", "ECCLESIASTICAL"),
+                ("COD", "CODING"),
+                ("RNT", "RANT"),
+                ("RAN", "RANDOM")
+            ]
+        )
+
         # write/saves explicitly
         conn.commit()
