@@ -8,7 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 .icons {
@@ -18,23 +18,20 @@
     image-rendering: pixelated;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background: var(--COLOR-ABSOLUTE-BACKGROUND);
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    height: 100%;
 }
 
 header, footer {
     background: var(--COLOR-MAIN-BACKGROUND);
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: .5em;
-    overflow: hidden;
 }
 
 /* HEADER */
@@ -124,11 +121,13 @@ nav li:hover {
 main {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     gap: .5em;
 }
 
 .mother-panels {
     background: var(--COLOR-MAIN-BACKGROUND);
+    flex-grow: 1;
 }
 
 #explorer-panel {
@@ -189,6 +188,58 @@ main {
 #clocks p {
     white-space: nowrap;
 }
+
+
+#logs-field {
+    flex-grow: 1;
+}
+
+#logs-container {
+    flex: 3;
+}
+
+#type-here {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 12px;
+    gap: 12px;
+}
+
+#type-log-here {
+    flex: 5;
+    resize: none;
+    border: none;
+    background-color: var(--COLOR-LOGFIELD-BACKGROUND);
+    padding: 5px;
+    overflow-y: scroll;
+    height: 7em;
+    
+    color: var(--COLOR-LOG-TEXT) !important;
+}
+
+#type-log-here::placeholder {
+    color: var(--COLOR-LOG-TEXT);
+    opacity: 0.6;
+}
+
+/* removes scroll buttons */
+#type-log-here::-webkit-scrollbar {
+    display: none;
+}
+
+#submit-log {
+    flex: 1;
+    text-align: center;
+    border: none;
+    color: var(--COLOR-LOG-TEXT);
+    background: var(--COLOR-LOGFIELD-BACKGROUND);
+}
+
+#submit-log:hover {
+    background: var(--COLOR-HOVER-BACKGROUND);
+}
+
 
 /* MODALS */
 .hidden {
