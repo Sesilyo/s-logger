@@ -5,10 +5,12 @@ import sqlite3
 import os
 
 # const
-DB_PATH = "logs/logger.db"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(BASE_DIR, "logs", "logger.db")
+
 
 def init_db():
-    os.makedirs("logs", exist_ok=True)
+    os.makedirs(os.path.join(BASE_DIR, "logs"), exist_ok=True)
 
     # initialize connection
     with sqlite3.connect(DB_PATH) as conn:

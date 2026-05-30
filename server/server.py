@@ -10,6 +10,15 @@ PORT = 8080
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB_DIR = os.path.join(BASE_DIR, "web")
 
+# Multipurpose Internet Mail Extension
+MIME_TYPES = {
+    '.html' :   'text/html',
+    '.css'  :   'text/css',
+    '.js'   :   'text/javascript',
+    'png'   :   'image/png',
+    '.ico'  :   'image/x-icon'
+}
+
 class LogHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         pass
@@ -23,17 +32,21 @@ class LogHandler(BaseHTTPRequestHandler):
         file_path = os.path.join(WEB_DIR, self.path[1:])
         print(f"Looking for: {file_path}")
 
+        ext = os.path.splitext(file_path)[1]
+        mime = MIME_TYPES.get(ext, 'text/plain')
+
         try:
-            file_to_open = open(file_path).read()
-            file_path = os.path.join(WEB_DIR, self.path[1:])
-            file_to_open = open(file_path).read()
+            with open(file_path, 'rb') as f:
+                content = f.read()
             self.send_response(200)
+            self.send_header('Content-Type', mime)
+            self.end_headers()
+            self.wfile.write(content)
         except:
-            file_to_open = "File NOT FOUND"
             self.send_response(404)
-        
-        self.end_headers()
-        self.wfile.write(bytes(file_to_open, 'utf-8'))
+            self.end_headers()
+            self.wfile.write(bytes("File NOT FOUND", 'utf-8'))
+
 
 def start_server():
     print(f"S-LOGGER middleman running port {PORT}")
