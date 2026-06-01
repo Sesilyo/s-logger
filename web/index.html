@@ -34,17 +34,21 @@
         <main>
             <!-- RIGHT PANEL -->
             <div id="explorer-panel" class="mother-panels">
-                <div id="logs-explorer">
-                    <img src="./assets/icons/filter-icon.png" class="icons">
-                    <label for="select-sort">Sort by: </label>
-                    <select name="sort" id="select-sort">
-                        <option value="pinned">Pinned</option>
-                        <option value="one-week">Within 7 days</option>
-                        <option value="one-fortnite">Within a fortnite</option>
-                        <option value="one-month">Within 30 days</option>
-                    </select>
-                    
-                    <div id="logs-list"></div>
+                
+                <div id="filters">
+                        <!-- tags filter | hardcoded -->
+                        <div id="tags-filter" class="filter-containers">
+                            <div class="filter-chip" data-filter="ANECDOTE"><p>ANECDOTE</p></div>
+                            <div class="filter-chip" data-filter="CODING"><p>CODING</p></div>
+                            <div class="filter-chip" data-filter="ECCLESIASTICAL"><p>ECCELSIASTICAL</p></div>
+                            <div class="filter-chip" data-filter="RANT"><p>RANT</p></div>
+                        </div>
+
+                        <!-- projects filter | injected via JS -->
+                        <div id="proj-filter" class="filter-container">
+
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -94,7 +98,7 @@
                         <option value="coding-tag">Coding</option>
                         <option value="ecclesiastical-tag">Ecclesiastical</option>
                     </select>
-    
+
                     <div id="project-toggle">
                         <input type="checkbox" id="under-project-check">
                         <label for="under-project-check">Under a Project?</label>

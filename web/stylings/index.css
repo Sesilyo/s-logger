@@ -139,28 +139,18 @@ main {
 }
 
 /* RIGHT PANEL */
-#logs-explorer {
+#explorer-panel {
     display: flex;
-    flex-direction: row;
-    padding: 10px;
-    gap: 5px;
-
-    align-items: center;
+    flex-direction: column;
+    color: var(--COLOR-MAIN-TEXT);
+    font-family: inherit;
 }
 
-#logs-explorer label {
-    white-space: nowrap;
+.filter-chip:hover {
+    cursor: pointer;
 }
 
-#logs-explorer select {
-    background: var(--COLOR-HOVER-BACKGROUND);
-    font-size: inherit;
-    border: none;
-    padding: 0 10px;
-    text-align: center;
 
-    text-overflow: ellipsis;
-}
 
 
 /* LEFT PANEL */
