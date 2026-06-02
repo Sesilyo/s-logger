@@ -2,7 +2,7 @@
 @import "./const-vars.css";
 
 
-h3, p, li, span, label, select, input, button {
+h3, p, li, span, label, select, input, button, div {
     color: var(--COLOR-MAIN-TEXT);
     font-family: "Space Mono", monospace;
     font-weight: 400;

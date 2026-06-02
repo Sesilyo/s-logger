@@ -2,6 +2,7 @@
 /* IMPORTS */
 @import "./const-vars.css";
 @import "./typography.css";
+@import "/web/stylings/filter-chip.css";
 
 
 /* GLOBAL RESET */
@@ -88,10 +89,13 @@ nav li button {
 
 
 nav li:hover {
-    background: var(--COLOR-HOVER-BACKGROUND);
-    
     /* box-shadow: [inset] [h-offset] [v-offset] [blur] [spread] [color]*/
     box-shadow: inset 0 -3px 0 var(--COLOR-MAIN-ACCENT);
+}
+
+nav li:hover, nav a:hover {
+    background: var(--COLOR-MAIN-HOVER);
+    color: var(--COLOR-ABSOLUTE-BACKGROUND);
 }
 
 #search-logs {
