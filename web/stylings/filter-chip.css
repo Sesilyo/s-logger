@@ -1,5 +1,5 @@
 /* FILENAME: filter-chip.css */
-@import "/web/stylings/const-vars.css";
+@import "./const-vars.css";
 
 #tags-filter {
     display: flex;

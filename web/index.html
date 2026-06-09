@@ -30,9 +30,9 @@
                 </ul>
             </nav>
         </header>
-        
+
         <main>
-            <!-- RIGHT PANEL -->
+            <!-- LEFT PANEL -->
             <div id="explorer-panel" class="mother-panels">
                 
                 <div id="filters">
@@ -54,7 +54,7 @@
             </div>
             
             
-            <!-- LEFT PANEL -->
+            <!-- RIGHT PANEL -->
             <div id="logging-panel" class="mother-panels">
                 <div id="console-body">
                     <div id="console-header">
@@ -104,17 +104,34 @@
                     <div id="project-toggle">
                         <input type="checkbox" id="under-project-check">
                         <label for="under-project-check">Under a Project?</label>
+                    
+                        <!-- hidden -->
+                        <div id="project-radio-list" class="hidden">
+                            <!-- list injected via JS -->
+                        </div>
                     </div>
                     <br>
 
                     <div id="confirm-new-log">
                         <button type="button" id="cancel-log-btn" class="modal-cancel-btn modal-btn">Cancel</button>
-                        <button type="submit" id="confirm-log-btn" class="modal-confirm-btn modal-btn">Initialize Log</button>
+                        <button type="button" id="confirm-log-btn" class="modal-confirm-btn modal-btn">Initialize Log</button>
                     </div>
                 </form>
             </div>
         </div>
         
+        <!-- CONFIRMATION MODAL -->
+        <div id="confirm-log-modal" class="modal hidden">
+            <div id="confirm-log-content" class="modal-content">
+                <h3 class="modal-title">Confirm New Log</h3>
+                <p>Is this log final? This cannot be edited once submitted.</p>
+                
+                <div id="confirm-log">
+                    <button type="button" id="cancel-confirm-btn" class="modal-cancel-btn modal-btn">Cancel</button>
+                    <button type="button" id="final-confirm-btn" class="modal-confirm-btn modal-btn">Confirm Log</button>
+                </div>
+            </div>
+        </div>
 
 
         <script src="./scripts/main.js" type="module"></script>

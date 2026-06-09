@@ -7,15 +7,13 @@ from generate_log_id import generate_id
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH  = os.path.join(BASE_DIR, "logs", "logger.db")
 
-def new_log(content, tag_id, tag_name, proj_id, proj_title, timestamp):
-    date = timestamp.strftime("%Y-%m-%d")
-    time = timestamp.strftime("%H:%M:%S")
+def new_log(content, tag_id, tag_name, proj_id, proj_title, date, time):
 
     # checker block if log belongs to a tag or a project
     if proj_id is None:
-        log_id = generate_id(tag_name, timestamp=timestamp)
+        log_id = generate_id(tag_name, date, time)
     else:
-        log_id = generate_id(proj_title,  timestamp=timestamp)
+        log_id = generate_id(proj_title, date, time)
 
 
     conn = None

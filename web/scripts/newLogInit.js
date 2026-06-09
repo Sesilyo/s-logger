@@ -10,7 +10,7 @@ export function initNewLogModal() {
     const newLogBtn    = document.getElementById("new-log-btn");
     const cancelLogBtn = document.getElementById("cancel-log-btn");
     
-    const checkBox = document.getElementById("");
+    const checkBox = document.getElementById("under-project-check");
     const logName  = document.getElementById("new-log-name-text");
     
     // guard clause to prevent errors if elements are missing
@@ -25,7 +25,20 @@ export function initNewLogModal() {
     newLogForm.addEventListener('submit', (e) => {
         e.preventDefault();
         console.log("Initialized new log");
-    
+
+        // grab form values
+        const title = document.getElementById('new-log-name-text').ariaValueMax.trim();
+        const tag   = document.getElementById('new-log-tags').value;
+
+        if (!title) return; // do not proceed if title is empty
+
+        // update console header
+        document.getElementById('log-title').textContent = title;
+
+        // un-hide typing area
+        document.getElementById('type-here').classList.remove('hidden');
+
+        // close modal & reset form
         newLogModal.classList.add('hidden');
         newLogForm.reset();
     });
