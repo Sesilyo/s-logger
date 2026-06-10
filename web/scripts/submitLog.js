@@ -30,5 +30,6 @@ submitLogBtn.addEventListener('click', async () => {
 
     // clear textarea & reload logs
     document.getElementById('type-log-here').value = '';
+    document.getElementById('type-here').classList.add('hidden');
     loadLogs();
 });

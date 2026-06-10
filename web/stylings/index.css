@@ -4,6 +4,7 @@
 @import "./typography.css";
 @import "./filter-chip.css";
 @import "./new-log-modal.css";
+@import "./log-style.css";
 
 /* GLOBAL RESET */
 * {
@@ -199,6 +200,7 @@ main {
 
 #logs-container {
     flex: 3;
+    flex-grow: 1;
     overflow-y: auto;
 }
 

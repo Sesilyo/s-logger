@@ -17,13 +17,21 @@ function renderLogs(logs) {
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="log">
-        <p class="log-id">${log.log_id}</p>
-                <p class="log-datetime">${log.date_created} ${log.time_created}</p>
-                <p class="log-content">${log.log_content}</p>
-                </div>
+            <p class="log-id">▓ ${log.log_id}</p>
+            <p class="log-datetime">${log.date_created} ${log.time_created}</p>
+            <p class="log-line">_________________________</p>
+            <p class="log-header">_____log starts here____</p>
+            <p class="log-content">${log.log_content}</p>
+            <p class="log-footer">_____log ends here______</p>
+            <p class="log-line">─────────────────────────</p>
+        </div>
                 `;
                 container.appendChild(div);
             });
+
+            // scroll to bottom after rendering
+            container.scrollTop = container.scrollHeight;
+
         }
         
         function applyFilters() {

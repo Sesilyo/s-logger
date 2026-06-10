@@ -1,0 +1,19 @@
+/* FILENAME: log-style.css */
+
+@import "./const-vars.css";
+
+.log {
+    padding: 10px;
+}
+
+.log-header, .log-footer, .log-line {
+    color: var(--COLOR-MAIN-ACCENT);
+}
+
+.log-header {
+    margin-bottom: 7px;
+}
+
+.log-footer {
+    margin-top: 7px;
+}

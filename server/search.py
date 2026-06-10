@@ -15,7 +15,7 @@ def get_logs():
         cursor.execute("""
             SELECT log_id, log_content, tag_id, proj_id, date_created, time_created
             FROM Logs
-            ORDER BY date_created DESC, time_created DESC
+            ORDER BY date_created ASC, time_created ASC
         """)
         rows = cursor.fetchall()
         return [dict(row) for row in rows]

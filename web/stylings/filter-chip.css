@@ -11,10 +11,22 @@
 .filter-chip {
     padding: 10px;
     border: 2px solid var(--COLOR-MAIN-TEXT);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s, background 0.2s;
 }
 
 .filter-chip:hover {
+    opacity: 1;
     color: var(--COLOR-ABSOLUTE-BACKGROUND);
     background-color: var(--COLOR-MAIN-HOVER);
+    border: 2px solid var(--COLOR-MAIN-HOVER);
+}
+
+.filter-chip.active,
+.filter-chip.active:hover {
+    opacity: 1;
+    color: var(--COLOR-ABSOLUTE-BACKGROUND);
+    background-color: var(--COLOR-MAIN-TEXT);
     border: 2px solid var(--COLOR-MAIN-HOVER);
 }
