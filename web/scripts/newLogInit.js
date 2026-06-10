@@ -2,6 +2,8 @@
     Initialize a new log via modal prompt
 */
 
+import { currentLog } from "./logState.js";
+
 export function initNewLogModal() {
 
     // getting HTML elements
@@ -24,13 +26,17 @@ export function initNewLogModal() {
     
     newLogForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const title = logName.value.trim();
+        if (!title) return;
+
         console.log("Initialized new log");
 
-        // grab form values
-        const title = document.getElementById('new-log-name-text').ariaValueMax.trim();
-        const tag   = document.getElementById('new-log-tags').value;
-
-        if (!title) return; // do not proceed if title is empty
+        // populate current log
+        currentLog.tag_id = document.getElementById('new-log-tags').value;
+        currentLog.tag_name = document.getElementById('new-log-tags').selectedOptions[0].text;
+        currentLog.proj_id = null;
+        currentLog.proj_title = null;
 
         // update console header
         document.getElementById('log-title').textContent = title;
