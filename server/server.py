@@ -2,6 +2,7 @@
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from logger import new_log
+from search import get_logs
 import subprocess
 import json
 import os
@@ -45,10 +46,12 @@ class LogHandler(BaseHTTPRequestHandler):
                 new_log(content=content, tag_id=tag_id, tag_name=tag_name, proj_id=proj_id, proj_title=proj_title, date=date, time=time)
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
                 self.wfile.write(bytes(json.dumps({"status": "ok"}), 'utf-8'))
             except Exception as e:
                 self.send_response(500)
+                self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
                 self.wfile.write(bytes(str(e), 'utf-8'))
 
@@ -56,6 +59,15 @@ class LogHandler(BaseHTTPRequestHandler):
     # get path of index.html
     # index.html is the entry point
     def do_GET(self):
+        if self.path == '/logs':
+            logs = get_logs()
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(bytes(json.dumps(logs), 'utf-8'))
+            return
+
         if self.path == '/':
             self.path = '/index.html'
         
